@@ -3,7 +3,7 @@ This module implements the command line application that will fetch the current
 event date and print out how long it is from now.
 """
 
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 from ywit_event_countdown.countdown import get_time_difference
 
@@ -11,7 +11,7 @@ from ywit_event_countdown.countdown import get_time_difference
 def main():
     """Main function to be called from entry_point script"""
 
-    time_left = get_time_difference()
+    time_left = get_time_difference(datetime.now(tz=datetime.now().astimezone().tzinfo))
     days = time_left // timedelta(days=1)
     hours = time_left // timedelta(hours=1) % 24
     minutes = time_left // timedelta(minutes=1) % 60
