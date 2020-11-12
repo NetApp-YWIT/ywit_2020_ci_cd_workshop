@@ -1,5 +1,5 @@
-![](https://github.com/NetApp-YWIT/ywit_2020_ci_cd_workshop/workflows/build/badge.svg?branch=master)
-[![codecov](https://codecov.io/gh/NetApp-YWIT/ywit_2020_ci_cd_workshop/branch/master/graph/badge.svg?token=QPHL12QH4N)](https://codecov.io/gh/NetApp-YWIT/ywit_2020_ci_cd_workshop)
+![](https://github.com/NetApp-YWIT/ywit_2020_ci_cd_workshop/workflows/build/badge.svg?branch=main)
+[![codecov](https://codecov.io/gh/NetApp-YWIT/ywit_2020_ci_cd_workshop/branch/main/graph/badge.svg?token=QPHL12QH4N)](https://codecov.io/gh/NetApp-YWIT/ywit_2020_ci_cd_workshop)
 
 # Using GitHub for CI/CD
 
