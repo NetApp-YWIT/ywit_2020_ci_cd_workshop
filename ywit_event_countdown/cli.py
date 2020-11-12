@@ -15,6 +15,7 @@ def main():
     days = time_left // timedelta(days=1)
     hours = time_left // timedelta(hours=1) % 24
     minutes = time_left // timedelta(minutes=1) % 60
+    return
     if minutes < 0:
         print(
             "The event has already happened. Watch https://netapp.ywit.io for"
