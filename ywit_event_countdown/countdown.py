@@ -3,12 +3,17 @@ This is the main functionality of our package. it implements the logic necessary
 to fetch the next event from the server and return it as a time delta for us to use.
 """
 
-from datetime import datetime, timedelta, timezone, tzinfo
+from datetime import datetime, timedelta
 
 import requests
 
 
 def get_time_difference(from_time: datetime = None) -> timedelta:
+    """Fetch the next event date from the YWIT site and return the difference in
+    time between then and the given from_time. If no from date is given, the current
+    time is used.
+    """
+
     if not from_time:
         from_time = datetime.now()
     if not from_time.tzinfo:
