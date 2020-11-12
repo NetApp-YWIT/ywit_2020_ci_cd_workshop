@@ -12,11 +12,10 @@ from ywit_event_countdown import countdown
 
 
 @pytest.mark.parametrize("from_time, event_date, expected_difference", [
-    (datetime(2020, 11, 12), "2020-11-13T16:00:00", 144000),
-    (datetime(2019, 11, 13), "2020-11-13T16:00:00", 31680000),
-    (None, "2020-11-13T16:00:00", (datetime(2020, 11, 13, 16) - datetime.now()) // timedelta(seconds=1)),
-    (datetime(2021, 11, 13), "2020-11-13T16:00:00", -31478400),
-    (datetime(2020, 11, 12), "2020-11-16T16:00:00", 403200),
+    (datetime(2020, 11, 12), "2020-11-13T16:00:00+00:00", 126000),
+    (datetime(2019, 11, 13), "2020-11-13T16:00:00+00:00", 31662000),
+    (datetime(2021, 11, 13), "2020-11-13T16:00:00+00:00", -31496400),
+    (datetime(2020, 11, 12), "2020-11-16T16:00:00+00:00", 385200),
 ])
 def test_get_time_difference(from_time, event_date, expected_difference, monkeypatch):
     """Validate that our time difference function works as expected when providing
