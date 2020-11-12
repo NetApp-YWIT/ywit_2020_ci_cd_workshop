@@ -19,5 +19,5 @@ def get_time_difference(from_time: datetime = None) -> timedelta:
 
 
 def _get_event_from_api() -> str:
-    response = requests.get("http://localhost:5000/api/get_next_event")
+    response = requests.get("https://netapp.ywit.io/api/get_next_event")
     return response.json()["next_event"]
